@@ -1,0 +1,428 @@
+@charset "UTF-8";
+/*===================================================
+RESET de estilos
+===================================================*/
+/* reseteo propiedad Bootstrap */
+*, ::after, ::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
+}
+
+
+/*===================================================
+Estilo marco principal de la App
+===================================================*/
+.app {
+    width: 100%;
+}
+
+/*===================================================
+Estilos Navbar
+===================================================*/
+.logo {
+    width: 100px;
+}
+
+.navbar {
+    /* position: relative; */
+    height: 100px;
+    padding-right: 10px;
+    /* width: 98%; */
+    gap: 50px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    /* border: solid green; */
+    background-color: rgb(199, 202, 204);
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    border: solid 1px black;
+}
+
+.catActiva {
+    color: black;
+    font-weight: bolder;
+}
+
+.catInactiva {
+    color: black;
+}
+
+@media only screen and (max-width: 400px) {
+    .navbar {
+        height: 150px;
+        /* width: 98%; */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        justify-items: center;
+    }
+  }
+
+  @media screen and (min-width: 401px) and (max-width: 768px) {
+    .navbar {
+        height: 100px;
+        /* width: 98%; */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        justify-items: center;    
+    }
+}
+
+.navbar div:nth-child(1) {
+    display: flex;
+    justify-content: left;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.navbar div:nth-child(1) ul {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 10px;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .navbar div:nth-child(1) ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 5px;    
+    }
+  }
+
+  @media screen and (min-width: 401px) and (max-width: 768px) {
+    .navbar div:nth-child(1) ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 5px;
+    }
+}
+
+.navbar div:nth-child(1) ul li {
+    width: 130px;
+    height: 22px;
+    margin-right: 10px;
+    list-style-type: none;
+    /* background-color: rgb(199, 202, 204); */
+    background: linear-gradient(to left, rgb(192, 192, 192) 90%, red 80%);
+    border: solid red 1px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.navbar div:nth-child(1) ul a {
+    text-decoration: none;
+}
+
+.navbar div:nth-child(1) ul li:hover {
+    background: none;
+    background-color: yellow;
+}
+
+.navbar div:nth-child(2) {
+    display: flex;
+    justify-content: right;
+    justify-items: right;
+}
+
+.carrito {
+    width: 32px;
+    height: 32px;
+    /* display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center; */
+}
+
+.carrito:hover {
+    padding-bottom: 5px;
+    border-bottom: solid 1px blue;
+}
+
+.carrito span {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 1em;
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 1em;
+    background-color: red;
+    text-align: center;
+}
+
+/*===================================================
+Estilos de contenedor ItemListContainer
+===================================================*/
+.principal {
+    position: relative;
+    margin: 10px;
+    /* height: 100%; */
+    /* border: solid orange; */
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.principal h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+/*===================================================
+Estilos de elementos en lista general
+===================================================*/
+.plantilla {
+    width: 150px;
+    height: 300px;
+    padding: 15px;
+    outline: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    /* justify-content: center; */
+    justify-items: center;
+}
+
+.plantilla img {
+    border-radius: 15px;
+}
+.boton__lista {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.plantilla__info {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.plantilla__info button {
+    width: 100px;
+    background: linear-gradient(to left, rgb(192, 192, 192) 90%, red 80%);
+    border: solid red 1px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.plantilla__info button:hover {
+    background: none;
+    background-color: yellow;
+}
+
+.listado {
+
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-around;
+    /* justify-items: baseline; */
+    /* align-content: space-around; */
+    /* align-items: center; */
+
+/*
+    FORMATO GRILLA
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 40px;
+*/
+}
+
+@media only screen and (max-width: 400px) {
+    .listado {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 401px) and (max-width: 768px) {
+    .listado {
+        margin-top: 10px;
+        display: grid;
+        /* padding: 10px; */
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 25px;
+        justify-items: center;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+/*===================================================
+Estilos de plantilla de detalle del elemento
+===================================================*/
+.items {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    outline: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.plantilla_item {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+    outline: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.plantilla_item img {
+    border-radius: 15px;
+}
+
+.plantilla__item__info {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+/*===================================================
+Estilos de contador agregar al carrito
+===================================================*/
+.contador {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.contador__segmento1 div:nth-child(1) {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+
+.contador__segmento1 div:nth-child(1) button {
+    width: 40px;
+    height: 40px;
+    border: solid red 1px;
+    border-radius: 20px;
+    font-size: 2rem;
+}
+
+.contador__segmento1 div:nth-child(1) button:hover {
+    outline: solid red 5px;
+}
+
+.contador__segmento1 div:nth-child(1) button:active {
+    background-color: red;
+}
+
+.contador__segmento1 div:nth-child(2) {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+
+}
+
+.contador__segmento1 div:nth-child(2) button {
+    border: solid red 1px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    width: 80px;
+    font-size: 1rem;
+}
+
+.contador__segmento1 div:nth-child(2) button:hover {
+    background: none;
+    background-color: yellow;
+    outline: solid red 5px;
+}
+
+.contador__segmento2 {
+    margin-top: 10px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: space-around;
+
+}
+
+.contador__segmento2 button {
+    background: linear-gradient(to left, rgb(192, 192, 192) 90%, red 80%);
+    border: solid red 1px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    font-size: 1rem;
+}
+
+.contador__segmento2 button:hover {
+    background: none;
+    background-color: yellow;
+    outline: solid red 5px;
+}

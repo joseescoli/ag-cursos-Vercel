@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/*===================================================
+RESET de estilos
+===================================================*/
+/* reseteo propiedad Bootstrap */
+*, ::after, ::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
+}
+
+/*===================================================
+Estilos globales
+===================================================*/
+body {
+    display: block;
+    background-color: rgb(199, 202, 204);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    width: 100%;
+    /* height: 100vh; */
+    /* border: solid blue; */
+  }
+  
+  h1 {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+
+  #root {
+    width: 100%;
+  }
