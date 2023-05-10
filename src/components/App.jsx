@@ -10,6 +10,7 @@ import { ItemListContainer } from './ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './ItemDetailContainer/ItemDetailContainer';
 import { Checkout } from './Checkout/Checkout';
 import { Cart } from './Cart/Cart';
+import { Footer } from './Footer/Footer';
 
 export const App = () => {
 
@@ -19,7 +20,7 @@ export const App = () => {
     <>
       <main className='app'>
         <BrowserRouter>
-        <NavBar />
+          <NavBar />
           <Routes>
             <Route path='/' element={<ItemListContainer />} />
             <Route path='/category/:categoria' element={<ItemListContainer />} />
@@ -28,6 +29,7 @@ export const App = () => {
             <Route path='/checkout' element={<Checkout />} />
             <Route path='*' element={ <h1>404 NOT FOUND</h1> } />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </main>
     </>

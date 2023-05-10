@@ -633,3 +633,34 @@ Estilos de formulario de Finalizar compra - Componente Checkout
     background-color: yellow;
     outline: solid red 5px;
 }
+
+/*===================================================
+Estilos de  Pié de página o FOOTER - Componente Footer
+===================================================*/
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: grey;
+    box-sizing: content-box;
+  }
+
+  footer img {
+    padding: 20px;
+    width: 40px;
+    animation-name: destacar;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+/*===================================================
+Animación íconos footer
+===================================================*/
+@keyframes destacar {
+    to {
+      transform: scale(1.2);
+    }
+}
