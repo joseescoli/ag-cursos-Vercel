@@ -11,8 +11,6 @@ import { ItemDetailContainer } from './ItemDetailContainer/ItemDetailContainer';
 import { Checkout } from './Checkout/Checkout';
 import { Cart } from './Cart/Cart';
 
-// Firebase
-import { createProducts } from '../firebase/config.js';
 export const App = () => {
 
   // Descomentar debajo para cargar productos del archivo JSON en "../firebase/config.js"

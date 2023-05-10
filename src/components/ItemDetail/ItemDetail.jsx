@@ -1,7 +1,7 @@
 import { ItemCount } from "../ItemCount/ItemCount"
 import { useCarritoContext } from "../../context/CartContext"
 
-export const ItemDetail = ({item}) => {
+export const ItemDetail = ( {item} ) => {
 
   const { addItem } = useCarritoContext()
 
@@ -21,4 +21,5 @@ export const ItemDetail = ({item}) => {
         </div>
      </div>
    )
+   
 }

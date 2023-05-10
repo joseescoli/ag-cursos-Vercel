@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 
 export const Item = ({ item }) => {
     return (
+
         <div className="plantilla">
             <img src={item.img} alt={`Imagen del curso ${item.nombre}`} />
             <div className="plantilla__info">
@@ -9,7 +10,7 @@ export const Item = ({ item }) => {
                 <h5>{item.dias}</h5>
                 <p>Horas semanales: {item.horas}</p>
                 <p>Precio: ${item.precio}</p>
-                <p>Vacantes: {item.vacantes}</p>
+                { item.vacantes !== 0 ? <p>Vacantes: {item.vacantes}</p>:<p>Sin vacantes</p>}
                 {
                     item.vacantes === 0 ?
                     <p className="boton__lista">Agotado</p>
@@ -18,5 +19,6 @@ export const Item = ({ item }) => {
                 }
             </div>
         </div>
+        
     )
 }

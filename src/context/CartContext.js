@@ -28,31 +28,26 @@ export const CarritoProvider = (props) => {
     }
 
     const addItem = (item, quantity) => {
-        if (isInCart(item.id)) { //Consulto si el producto existe o no en el carrito
-            //Consulto y seteo la cantidad en el carrito
+
+        // Se valida si el producto ya se encuentra en el carrito
+        if ( isInCart(item.id) ) {
+            // De encontrarse el mismo producto se altera el número de la cantidad
             const indice = carrito.findIndex(prod => prod.id === item.id)
             const aux = [...carrito]
             aux[indice].quantity = quantity
             setCarrito(aux)
         } else {
-            //Creo un nuevo objeto con los datos ingresados
+            // Si el producto no existe en el carrito, se copia la variable item agregando la propiedad de cantidad elegida
             const newItem = {
                 ...item,
-                quantity: quantity //Si agrego directamente el parametro se queda con el mismo nombre
+                quantity
             }
-            /*//Genero un aux que es igual al carrito para poder hacer el push
-            const aux = carrito
-            aux.push(newItem)
-            setCarrito(aux)*/
-            setCarrito([...carrito, newItem]) //Genero una copia del carrito + el nuevo producto
+            // Se genera copia del carrito actual sumando el nuevo producto
+            setCarrito([...carrito, newItem])
         }
     }
 
     const removeItem = (id) => {
-        /*const aux = [...carrito]
-        const indice = aux.findIndex(prod => prod.id === id)
-        setCarrito(aux.splice(indice,1))*/
-
         //Traeme todos los productos que no tengan el id ingresado
         setCarrito(carrito.filter(prod => prod.id !== id))
     }

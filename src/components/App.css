@@ -25,10 +25,9 @@ Estilos Navbar
 }
 
 .navbar {
-    /* position: relative; */
     height: 100px;
     padding-right: 10px;
-    /* width: 98%; */
+
     gap: 50px;
     margin: 10px;
     display: flex;
@@ -36,7 +35,7 @@ Estilos Navbar
     flex-direction: column;
     justify-content: center;
     justify-items: center;
-    /* border: solid green; */
+
     background-color: rgb(199, 202, 204);
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
     border-radius: 50px;
@@ -55,7 +54,7 @@ Estilos Navbar
 @media only screen and (max-width: 400px) {
     .navbar {
         height: 150px;
-        /* width: 98%; */
+
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -68,7 +67,7 @@ Estilos Navbar
   @media screen and (min-width: 401px) and (max-width: 768px) {
     .navbar {
         height: 100px;
-        /* width: 98%; */
+
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -114,7 +113,7 @@ Estilos Navbar
     height: 22px;
     margin-right: 10px;
     list-style-type: none;
-    /* background-color: rgb(199, 202, 204); */
+
     background: linear-gradient(to left, rgb(192, 192, 192) 90%, red 80%);
     border: solid red 1px;
     border-radius: 15px;
@@ -140,11 +139,6 @@ Estilos Navbar
 .carrito {
     width: 32px;
     height: 32px;
-    /* display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center; */
 }
 
 .carrito:hover {
@@ -164,13 +158,12 @@ Estilos Navbar
 }
 
 /*===================================================
-Estilos de contenedor ItemListContainer
+Estilos del listado general - Componente ItemListContainer
 ===================================================*/
 .principal {
     position: relative;
     margin: 10px;
-    /* height: 100%; */
-    /* border: solid orange; */
+
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
     border-radius: 50px;
     border: solid 1px black;
@@ -188,8 +181,46 @@ Estilos de contenedor ItemListContainer
     text-align: center;
 }
 
+.listado {
+
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 400px) {
+    .listado {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 401px) and (max-width: 768px) {
+    .listado {
+        margin-top: 10px;
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 25px;
+        justify-items: center;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+    }
+}
+
 /*===================================================
-Estilos de elementos en lista general
+Estilos de plantilla para elementos en listado general - Componente Item
 ===================================================*/
 .plantilla {
     width: 150px;
@@ -202,7 +233,6 @@ Estilos de elementos en lista general
     flex-direction: column;
     align-items: center;
     align-content: center;
-    /* justify-content: center; */
     justify-items: center;
 }
 
@@ -240,58 +270,8 @@ Estilos de elementos en lista general
     background-color: yellow;
 }
 
-.listado {
-
-    margin: 20px;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: space-around;
-    /* justify-items: baseline; */
-    /* align-content: space-around; */
-    /* align-items: center; */
-
-/*
-    FORMATO GRILLA
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-gap: 40px;
-*/
-}
-
-@media only screen and (max-width: 400px) {
-    .listado {
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        justify-items: center;
-        align-content: center;
-        align-items: center;
-    }
-  }
-
-  @media screen and (min-width: 401px) and (max-width: 768px) {
-    .listado {
-        margin-top: 10px;
-        display: grid;
-        /* padding: 10px; */
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        grid-gap: 25px;
-        justify-items: center;
-        justify-content: space-evenly;
-        align-content: center;
-        align-items: center;
-    }
-}
-
 /*===================================================
-Estilos de plantilla de detalle del elemento
+Estilos de plantilla de detalle del elemento - Componente ItemDetailContainer
 ===================================================*/
 .items {
     margin: 20px;
@@ -307,6 +287,9 @@ Estilos de plantilla de detalle del elemento
     text-align: center;
 }
 
+/*===================================================
+Estilos de plantilla de detalle del elemento - Componente ItemDetail
+===================================================*/
 .plantilla_item {
     margin: 20px;
     padding: 20px;
@@ -321,6 +304,13 @@ Estilos de plantilla de detalle del elemento
     border-radius: 15px;
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
     text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+    .plantilla_item {
+        margin: 5px;
+        padding: 5px;
+    }
 }
 
 .plantilla_item img {
@@ -338,7 +328,7 @@ Estilos de plantilla de detalle del elemento
 }
 
 /*===================================================
-Estilos de contador agregar al carrito
+Estilos del contador del detalle del producto - Componente ItemCount
 ===================================================*/
 .contador {
     display: flex;
@@ -422,6 +412,223 @@ Estilos de contador agregar al carrito
 }
 
 .contador__segmento2 button:hover {
+    background: none;
+    background-color: yellow;
+    outline: solid red 5px;
+}
+
+/*===================================================
+Estilos del carrito - Componente Cart
+===================================================*/
+.carrito__resumen--vacio, .carrito__resumen {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: solid 1px black;
+    text-align: center;
+}
+
+.carrito__resumen--vacio a, .carrito__resumen a {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+.carrito__resumen__total {
+    font-weight: bolder;
+}
+
+.carrito__resumen__botones {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.carrito__resumen__vaciar, .carrito__resumen__finalizar, .carrito__resumen__continuar {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin: 10px;
+    display: flex;
+    height: 20px;
+    width: 200px;
+
+    background: linear-gradient(to left, rgb(192, 192, 192) 90%, red 80%);
+    border: solid red 1px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+
+    font-weight: bold;
+}
+
+.carrito__resumen__vaciar:hover, .carrito__resumen__finalizar:hover, .carrito__resumen__continuar:hover {
+background: none;
+background-color: yellow;
+outline: solid red 5px;
+}
+
+/*===================================================
+Estilos de cada elemento del carrito - Componente ItemCart
+===================================================*/
+.carrito__resumen__elemento {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: solid 1px black;
+    text-align: center;
+}
+
+.carrito__resumen__elemento__contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.carrito__resumen__elemento__imagen {
+    display: block;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.carrito__resumen__elemento__imagen img {
+    border-radius: 10px;
+}
+
+.carrito__resumen__elemento__datos__contenedor {
+    display: block;
+    margin: 10px;
+}
+
+.carrito__resumen__elemento__datos {
+    display: block;
+}
+
+.carrito__resumen__elemento__datos button {
+    font-size: calc(1rem + 1vw);
+    outline: 1px black solid;
+    border-radius: 15px;
+}
+
+.carrito__resumen__elemento__datos button:hover {
+    outline: 2px red solid;
+    border-radius: 15px;
+}
+
+/*===================================================
+Estilos de formulario de Finalizar compra - Componente Checkout
+===================================================*/
+.Formulario--vacio {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: solid 1px black;
+    text-align: center;
+}
+
+.form__continuar, .form__enviar {
+    margin: 10px;
+    height: 20px;
+    width: 200px;
+
+    background: linear-gradient(to left, rgb(192, 192, 192) 90%, red 80%);
+    border: solid red 1px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+
+    font-weight: bold;
+}
+
+.Formulario {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 10px;
+    padding: 10px;
+
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: solid 1px black;
+}
+
+.form__contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+.form__nombre, .form__correo, .form__dni, .form__telefono, .form__direccion {
+    margin: 10px;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 400px) {
+    .form__nombre, .form__correo, .form__dni, .form__telefono, .form__direccion {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 401px) and (max-width: 768px) {
+    .form__nombre, .form__correo, .form__dni, .form__telefono, .form__direccion {
+        margin-top: 10px;
+        width: 100%;
+    }
+  }
+
+.form__nombre__label, .form__correo__label, .form__dni__label, .form__telefono__label, .form__direccion__label {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.form__nombre__input, .form__correo__input, .form__dni__input, .form__telefono__input, .form__direccion__input {
+    margin: 10px;
+}
+
+.form__continuar:hover, .form__enviar:hover {
     background: none;
     background-color: yellow;
     outline: solid red 5px;
